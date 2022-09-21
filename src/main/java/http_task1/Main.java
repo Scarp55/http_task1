@@ -26,6 +26,6 @@ public class Main {
 		CloseableHttpResponse response = httpClient.execute(request);
 
 		mapper.readValue(response.getEntity().getContent(), new TypeReference<List<FactsOfCats>>() {
-		}).stream().filter(value -> value.getUpvotes() != null).forEach(System.out::println);
+		}).stream().filter(value -> value.getUpvotes() != 0).forEach(System.out::println);
 	}
 }

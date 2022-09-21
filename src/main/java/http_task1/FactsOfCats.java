@@ -8,14 +8,14 @@ public class FactsOfCats {
 	String text;
 	String type;
 	String user;
-	String upvotes;
+	int upvotes;
 
 	public FactsOfCats() {
 	}
 
 	public FactsOfCats(@JsonProperty("id") String id, @JsonProperty("text") String text,
 			@JsonProperty("type") String type, @JsonProperty("user") String user,
-			@JsonProperty("upvotes") String upvotes) {
+			@JsonProperty("upvotes") int upvotes) {
 		this.id = id;
 		this.text = text;
 		this.type = type;
@@ -39,7 +39,7 @@ public class FactsOfCats {
 		return user;
 	}
 
-	public String getUpvotes() {
+	public int getUpvotes() {
 		return upvotes;
 	}
 
